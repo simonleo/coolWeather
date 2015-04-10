@@ -1,9 +1,10 @@
-package model;
+package com.example.coolweather.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import db.CoolWeatherOpenHelper;
+import com.example.coolweather.db.CoolWeatherOpenHelper;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
