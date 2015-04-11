@@ -10,7 +10,9 @@ import com.example.coolweather.util.HttpUtil;
 
 
 
+import com.example.coolweather.util.LogUtil;
 import com.example.coolweather.util.Utility;
+
 
 
 
@@ -78,6 +80,7 @@ public class ChooseAreaActivity extends Activity{
 	}
 	
 	private void queryProvinces() {
+		LogUtil.v("TAG", "queryProvinces");
 		provinceList = coolWeatherDB.loadProvinces();
 		if (provinceList.size()>0) {
 			dataList.clear();
@@ -94,6 +97,7 @@ public class ChooseAreaActivity extends Activity{
 	}
 	
 	private void queryCities() {
+		LogUtil.v("TAG", "queryCities");
 		cityList = coolWeatherDB.loadCities(selectedProvince.getId());
 		if (cityList.size()>0) {
 			dataList.clear();
@@ -110,6 +114,7 @@ public class ChooseAreaActivity extends Activity{
 	}
 	
 	private void queryCounties() {
+		LogUtil.v("TAG", "queryCounties");
 		countyList = coolWeatherDB.loadCounties(selectedCity.getId());
 		if (countyList.size()>0) {
 			dataList.clear();
@@ -126,6 +131,7 @@ public class ChooseAreaActivity extends Activity{
 	}
 	
 	private void queryFromServer(final String code, final String type) {
+		LogUtil.v("TAG", "queryFromServer");
 		String address;
 		if (!TextUtils.isEmpty(code)) {
 			address = "http://www.weather.com.cn/data/list3/city" + code + ".xml";
