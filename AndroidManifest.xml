@@ -4,11 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <!--
-        <uses-sdk
+    <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
-    -->
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -28,6 +26,12 @@
         </activity>
         <activity android:name="com.example.coolweather.activity.WeatherActivity" >
         </activity>
+
+        <service android:name="com.example.coolweather.service.AutoUpdateService" >
+        </service>
+
+        <receiver android:name="com.example.coolweather.receiver.AutoUpdateReceiver" >
+        </receiver>
     </application>
 
 </manifest>
